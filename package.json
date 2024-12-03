@@ -42,5 +42,10 @@
     "eslint": "^9.16.0",
     "eslint-plugin-react": "^7.37.2",
     "globals": "^15.13.0"
-  }
+  },
+  "jest": {
+  "testMatch": [
+    "**/src/**/*.{test,spec}.js"
+  ]
+}
 }
