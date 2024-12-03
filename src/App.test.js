@@ -29,7 +29,8 @@ describe("Quiz App Tests", () => {
   test("shows score after the last question", () => {
     render(<App />);
 
-    questions.forEach((question) => {
+    const options = screen.getAllByRole("button");
+    questions.forEach((question, index) => {
       const correctOption = screen.getByText(question.answer);
       fireEvent.click(correctOption);
     });
