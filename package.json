@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false --passWithNoTests",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx}"
   },
@@ -45,8 +45,8 @@
   },
   "jest": {
   "testMatch": [
-    "*/tests//.{js,jsx,ts,tsx}",
-    "*/?(.)+(spec|test).{js,jsx,ts,tsx}"
+    "**/src/**/*.{test.js,jsx,ts,tsx}",
+      "**/src/__tests__/**/*.{js,jsx,ts,tsx}"
   ]
 }
 }
