@@ -3,7 +3,7 @@ import "./App.css";
 
 export const questions = [
   {
-    question: "What does 'CI/CD' stand for in DevOps?",
+    question: "What does 'CI/CD' stand for in DevOps???",
     options: [
       "Continuous Integration/Continuous Delivery",
       "Critical Infrastructure/Cloud Deployment",
