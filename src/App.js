@@ -1,23 +1,49 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const questions = [
+export const questions = [
   {
-    question: "What is the capital of Canada?",
-    options: ["Toronto", "Ottawa", "Vancouver", "Montreal"],
-    answer: "Ottawa",
+    question: "What does 'CI/CD' stand for in DevOps?",
+    options: [
+      "Continuous Integration/Continuous Delivery",
+      "Critical Infrastructure/Cloud Deployment",
+      "Code Implementation/Continuous Debugging",
+      "Cloud Integration/Continuous Development",
+    ],
+    answer: "Continuous Integration/Continuous Delivery",
   },
   {
-    question: "Which programming language is used for React?",
-    options: ["Python", "Java", "JavaScript", "C#"],
-    answer: "JavaScript",
+    question: "Which tool is commonly used for container orchestration in DevOps?",
+    options: ["Docker", "Kubernetes", "Git", "Jenkins"],
+    answer: "Kubernetes",
   },
   {
-    question: "Which is the largest planet in our solar system?",
-    options: ["Earth", "Mars", "Jupiter", "Venus"],
-    answer: "Jupiter",
+    question: "What is the primary purpose of a version control system in DevOps?",
+    options: [
+      "Manage server configurations",
+      "Track changes in codebase",
+      "Automate deployments",
+      "Monitor application performance",
+    ],
+    answer: "Track changes in codebase",
+  },
+  {
+    question: "Which of the following is NOT a CI/CD tool?",
+    options: ["Jenkins", "Travis CI", "CircleCI", "Photoshop"],
+    answer: "Photoshop",
+  },
+  {
+    question: "What is Infrastructure as Code (IaC) in DevOps?",
+    options: [
+      "Automating infrastructure management with code",
+      "A programming language for DevOps",
+      "A method for designing user interfaces",
+      "None of the above",
+    ],
+    answer: "Automating infrastructure management with code",
   },
 ];
+
 
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
