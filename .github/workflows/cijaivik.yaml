@@ -35,7 +35,3 @@
           run: |
             docker build -t quiz-app .
             echo "Docker image built successfully!"
-        - name: Create Deployment and Service
-          run: |
-            kubectl apply -f ds.yaml
-            echo "Deployment and Service created successfully!"
