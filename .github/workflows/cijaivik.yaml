@@ -31,4 +31,8 @@
 
         - name: Build project
           run: npm run build
+        - name: Build Docker Image
+          run: |
+          docker build -t quiz-app .
+          echo "Docker image built successfully!"
 
