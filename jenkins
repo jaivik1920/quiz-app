@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+               git branch: 'main',  url: 'https://github.com/jaivik1920/quiz-app.git'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    bat 'npm install'
+                }
+            }
+        }
+        stage('Run Linting') {
+            steps {
+                script {
+                    bat 'npm run lint'
+                }
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                script {
+                   bat "npm test"
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                script {
+                    bat 'npm run build'
+                }
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                bat 'docker build -t quiz-app-jenkins-image .'
+            }
+        }
+        stage('Run Docker Container') {
+            steps {
+                bat 'docker run -d -p 3000:3000 --name quiz-app-jenkins-container quiz-app-jenkins-image'
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Build and tests were successful!'
+        }
+        failure {
+            echo 'Build or tests failed!'
+        }
+    }
+}
