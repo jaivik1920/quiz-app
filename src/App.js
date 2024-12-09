@@ -5,7 +5,7 @@ export const questions = [
   {
     question: "What does 'CI/CD' stand for in DevOps?",
     options: [
-      "Continuous Integration/Continuous Deliggggggvery",
+      "Continuous Integration/Continuous Delivery",
       "Critical Infrastructure/Cloud Deployment",
       "Code Implementation/Continuous Debugging",
       "Cloud Integration/Continuous Development",
@@ -72,6 +72,7 @@ function App() {
   return (
     <div className="App">
       <h1>Quiz App</h1>
+      <h2> group 10</h2>
       {showScore ? (
         <div className="score-section">
           <h2>Your Score: {score}/{questions.length}</h2>
