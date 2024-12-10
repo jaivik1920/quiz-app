@@ -72,7 +72,7 @@ function App() {
   return (
     <div className="App">
       <h1>Quiz App</h1>
-      <h2> group 10</h2>
+      <h2>Group 10 Devops Project Presentation</h2>
       {showScore ? (
         <div className="score-section">
           <h2>Your Score: {score}/{questions.length}</h2>
